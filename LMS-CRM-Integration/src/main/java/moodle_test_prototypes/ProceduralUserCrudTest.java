@@ -1,4 +1,4 @@
-package moodle_test_templates;
+package moodle_test_prototypes;
 
 import java.io.IOException;
 

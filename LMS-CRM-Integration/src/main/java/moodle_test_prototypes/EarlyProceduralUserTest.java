@@ -1,4 +1,4 @@
-package moodle_test_templates;
+package moodle_test_prototypes;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +24,7 @@ import moodle_test_resources.MoodleBVTQuickNavMethods;
 
 	//Old imports from Junit
 
-public class MoodleProceduralUserTest {
+public class EarlyProceduralUserTest {
 	
 	private static WebDriver driver = new ChromeDriver();
 	
