@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MoodleSmokeTest]">
+  <test thread-count="5" name="User_Course_Category_Entroll(failed)">
+    <groups>
+      <run>
+        <include name="Create"/>
+        <include name="Read"/>
+        <include name="Update"/>
+        <include name="Delete"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="moodle_tests.UserCrudTests">
+        <methods>
+          <include name="readUser"/>
+          <include name="updateUser"/>
+          <include name="deleteUser"/>
+          <include name="createUser"/>
+        </methods>
+      </class> <!-- moodle_tests.UserCrudTests -->
+    </classes>
+  </test> <!-- User_Course_Category_Entroll(failed) -->
+</suite> <!-- Failed suite [MoodleSmokeTest] -->

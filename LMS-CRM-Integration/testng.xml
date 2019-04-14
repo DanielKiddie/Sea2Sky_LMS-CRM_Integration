@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MoodleSmokeTest">
+  <test thread-count="5" name="User_Course_Category_Enroll">
+  
+  <groups>
+  			
+  			<define name= "Smoke"> <!-- Meta-group that defines test sets -->
+  			
+  			<include name= "Create" ></include>
+  			<include name= "Read" ></include>
+  			<include name= "Update" ></include>
+  			<include name= "Delete" ></include>
+  			
+  			</define>
+  
+  
+  <run> <!-- Which groups get used when test is run -->
+  
+  			<include name= "smoke" ></include>
+  
+  </run>
+  
+  </groups>
+  
+  
+    <packages> <!-- Specifies which packages are being drawn from for this suite -->
+    
+    		   <!-- Note: you can also specify by using the 'class' tags -->
+      
+      <package name="moodle_tests"/>
+      
+      
+      
+      
+      
+    </packages>
+  </test> <!-- User_Course_Category_Enroll -->
+</suite> <!-- MoodleSmokeTest -->

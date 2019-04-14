@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="53309" started-at="2019-04-12T02:40:26Z" finished-at="2019-04-12T02:41:20Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="53309" started-at="2019-04-12T02:40:26Z" finished-at="2019-04-12T02:41:20Z">
+      <class name="moodle_test_templates.UserCrudTestEarly">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:moodle_test_templates.UserCrudTestEarly@5b38c1ec]" name="setUp" is-config="true" duration-ms="18" started-at="2019-04-12T02:40:26Z" finished-at="2019-04-12T02:40:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:moodle_test_templates.UserCrudTestEarly@5b38c1ec]" name="setUpBeforeClass" is-config="true" duration-ms="5262" started-at="2019-04-12T02:40:26Z" finished-at="2019-04-12T02:40:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="test()[pri:0, instance:moodle_test_templates.UserCrudTestEarly@5b38c1ec]" name="test" duration-ms="43584" started-at="2019-04-12T02:40:32Z" finished-at="2019-04-12T02:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="tearDownAfterClass()[pri:0, instance:moodle_test_templates.UserCrudTestEarly@5b38c1ec]" name="tearDownAfterClass" is-config="true" duration-ms="4404" started-at="2019-04-12T02:41:15Z" finished-at="2019-04-12T02:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterClass -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:moodle_test_templates.UserCrudTestEarly@5b38c1ec]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-04-12T02:41:20Z" finished-at="2019-04-12T02:41:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- moodle_test_templates.UserCrudTestEarly -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
