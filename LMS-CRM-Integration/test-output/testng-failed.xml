@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="moodle_test_templates.UserCrudTestEarly">
+      <class name="moodle_test_prototypes.ProceduralUserCrudTest">
         <methods>
-          <include name="setUpBeforeClass"/>
           <include name="tearDown"/>
-          <include name="tearDownAfterClass"/>
           <include name="setUp"/>
+          <include name="tearDownAfterClass"/>
+          <include name="setUpBeforeClass"/>
           <include name="test"/>
         </methods>
-      </class> <!-- moodle_test_templates.UserCrudTestEarly -->
+      </class> <!-- moodle_test_prototypes.ProceduralUserCrudTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

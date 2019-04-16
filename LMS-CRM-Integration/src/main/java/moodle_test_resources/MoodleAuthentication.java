@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.ClickBy;
 import utils.SendKeysBy;
 
-public class MoodleAuthenticationMethods {
+public class MoodleAuthentication {
 	
 	
 public static void logIn(WebDriver driver) {

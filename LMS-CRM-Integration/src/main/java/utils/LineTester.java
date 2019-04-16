@@ -8,6 +8,11 @@ public class LineTester {
 			
 			//Line to test here
 			
+			Excel excel = new Excel("C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Access_Creds.xlsx", "Sheet1");
+			
+			String testUsername = excel.getStringCellData(1, 0);
+			
+			System.out.println(testUsername);
 
 			
 			

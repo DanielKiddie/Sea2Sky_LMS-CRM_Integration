@@ -17,7 +17,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import moodle_test_resources.MoodleAuthenticationMethods;
+import moodle_test_resources.MoodleAuthentication;
 import utils.CheckIfDisplayedBy;
 import utils.ClickBy;
 import utils.Screenshot;
@@ -68,7 +68,7 @@ public class UserCrudTests {
 		test.info("Starting "+testName);
 		
 		test.info("Logging in");
-		MoodleAuthenticationMethods.logIn(driver);	
+		MoodleAuthentication.logIn(driver);	
 		test.pass("Login succesful");
 		
 		
@@ -78,7 +78,7 @@ public class UserCrudTests {
 		public static void tearDownAfterClass() throws Exception {
 			
 			test.info("Logging out");
-			MoodleAuthenticationMethods.logOut(driver);
+			MoodleAuthentication.logOut(driver);
 			test.pass("Logout successful");
 			
 			driver.close();
@@ -109,7 +109,7 @@ public class UserCrudTests {
 			
 		try {
 			
-			MoodleAuthenticationMethods.clickSiteAdminTabReliably(driver);
+			MoodleAuthentication.clickSiteAdminTabReliably(driver);
 			
 			ClickBy.LinkText(driver, "Users");
 			ClickBy.LinkText(driver, "Add a new user");
@@ -165,13 +165,13 @@ public class UserCrudTests {
 			if (initialCreatedEmail) {
 			test.pass("User First Name, Surname and Email Address saved to account"); }
 			
-			MoodleAuthenticationMethods.logOut(driver);
-			MoodleAuthenticationMethods.logInAsUser(driver, creatableUserName, creatablePassword);
-			MoodleAuthenticationMethods.logOut(driver);
+			MoodleAuthentication.logOut(driver);
+			MoodleAuthentication.logInAsUser(driver, creatableUserName, creatablePassword);
+			MoodleAuthentication.logOut(driver);
 			test.pass("Login and Logout from User account successful");
 			
 			
-			MoodleAuthenticationMethods.logIn(driver);
+			MoodleAuthentication.logIn(driver);
 				
 				
 			test.pass("Read Test complete");

@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import moodle_test_resources.MoodleAuthenticationMethods;
+import moodle_test_resources.MoodleAuthentication;
 import moodle_test_resources.MoodleBVTQuickNavMethods;
 
 // import ca.poltech.automation.util.Configuration;
@@ -50,7 +50,7 @@ public class EarlyProceduralUserTest {
 	public static void setUpBeforeClass() throws Exception {
 		
 				
-		MoodleAuthenticationMethods.logIn(driver);
+		MoodleAuthentication.logIn(driver);
 		
 		//Enters Access Credentials and Submits
 		

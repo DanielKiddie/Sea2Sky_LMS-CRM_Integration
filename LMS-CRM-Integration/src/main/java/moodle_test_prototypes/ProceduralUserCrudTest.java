@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -17,9 +16,10 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import moodle_test_resources.MoodleAuthenticationMethods;
+import moodle_test_resources.MoodleAuthentication;
 import utils.CheckIfDisplayedBy;
 import utils.ClickBy;
+import utils.Excel;
 import utils.Screenshot;
 import utils.SendKeysBy;
 
@@ -27,7 +27,7 @@ public class ProceduralUserCrudTest {
 	
 // Test report details and screenshot save location
 	
-		private static String testName = "Moodle User CRUD Test";
+		private static String testName = "Moodle User CRUD Tests";
 		private static String testDescription = "Runs Create, Read, Update, and Delete tests on Moodle User component";
 		private static String screenshotSaveLocationFilePath = "C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Poludo Institute\\\\Selenium\\\\FrameworkToolShop\\\\error.png";
 		
@@ -46,7 +46,7 @@ public class ProceduralUserCrudTest {
 		private static WebDriver driver = new ChromeDriver();
 		//private static WebDriver driver = new FirefoxDriver();
 		
-		static WebDriverWait wait = new WebDriverWait(driver, 10);
+		//static WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		static ExtentHtmlReporter htmlReporter;
 		static ExtentReports extent;
@@ -68,7 +68,7 @@ public class ProceduralUserCrudTest {
 		test.info("Starting "+testName);
 		
 		test.info("Logging in");
-		MoodleAuthenticationMethods.logIn(driver);	
+		MoodleAuthentication.logIn(driver);	
 		test.pass("Login succesful");
 		
 		
@@ -78,7 +78,7 @@ public class ProceduralUserCrudTest {
 		public static void tearDownAfterClass() throws Exception {
 			
 			test.info("Logging out");
-			MoodleAuthenticationMethods.logOut(driver);
+			MoodleAuthentication.logOut(driver);
 			test.pass("Logout successful");
 			
 			driver.close();
@@ -109,7 +109,7 @@ public class ProceduralUserCrudTest {
 			
 		try {
 			
-			MoodleAuthenticationMethods.clickSiteAdminTabReliably(driver);
+			MoodleAuthentication.clickSiteAdminTabReliably(driver);
 			
 			ClickBy.LinkText(driver, "Users");
 			ClickBy.LinkText(driver, "Add a new user");
@@ -130,7 +130,6 @@ public class ProceduralUserCrudTest {
 					
 				
 			test.pass("Create Test complete");	
-			
 
 //Read User Test
 		
@@ -151,8 +150,8 @@ public class ProceduralUserCrudTest {
 			if (CheckIfDisplayedBy.LinkText(driver, creatableEmailAddress)) {
 			test.pass("User First Name, Surname and Email Address saved to account"); }
 			
-			MoodleAuthenticationMethods.logOut(driver);
-			MoodleAuthenticationMethods.logInAsUser(driver, creatableUserName, creatablePassword);
+			MoodleAuthentication.logOut(driver);
+			MoodleAuthentication.logInAsUser(driver, creatableUserName, creatablePassword);
 			
 			// Attempts to wait for log in tour and close it, not usually necessary though
 			
@@ -163,11 +162,11 @@ public class ProceduralUserCrudTest {
 			//	ClickBy.CssSelector(driver, "div.modal-header > button.close > span");
 			//}
 			
-			MoodleAuthenticationMethods.logOut(driver);
+			MoodleAuthentication.logOut(driver);
 			test.pass("Login and Logout from User account successful");
 			
 			
-			MoodleAuthenticationMethods.logIn(driver);
+			MoodleAuthentication.logIn(driver);
 				
 				
 			test.pass("Read Test complete");		
