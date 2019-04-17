@@ -28,7 +28,7 @@ public class ProceduralUserCrudTest {
 	
 		private static String testName = "Moodle User CRUD Tests";
 		private static String testDescription = "Runs Create, Read, Update, and Delete tests on Moodle User component";
-		private static String screenshotSaveLocationFilePath = "C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Poludo Institute\\\\Selenium\\\\FrameworkToolShop\\\\error.png";
+		private static String screenshotSaveLocationFilePath = "C:\\Users\\Daniel - new\\Desktop\\Poludo Institute\\Personal Github Repos 2019 onward\\Sea2Sky_LMS-CRM_Integration\\LMS-CRM-Integration\\\\Procedural_User_CRUD_Fail.png";
 		
 		
 // Test specific Strings
@@ -70,7 +70,7 @@ public class ProceduralUserCrudTest {
 		test.info("Logging in");
 		MoodleAuthentication.logIn(driver);	
 		test.pass("Login succesful");
-		
+
 		
 		}
 
@@ -112,6 +112,7 @@ public class ProceduralUserCrudTest {
 		try {
 			
 			MoodleAuthentication.clickSiteAdminTabReliably(driver);
+			
 			
 			ClickBy.LinkText(driver, "Users");
 			ClickBy.LinkText(driver, "Add a new user");
