@@ -19,7 +19,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import moodle_test_resources.MoodleAuthentication;
 import utils.CheckIfDisplayedBy;
 import utils.ClickBy;
-import utils.Excel;
 import utils.Screenshot;
 import utils.SendKeysBy;
 
@@ -30,6 +29,7 @@ public class ProceduralUserCrudTest {
 		private static String testName = "Moodle User CRUD Tests";
 		private static String testDescription = "Runs Create, Read, Update, and Delete tests on Moodle User component";
 		private static String screenshotSaveLocationFilePath = "C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Poludo Institute\\\\Selenium\\\\FrameworkToolShop\\\\error.png";
+		
 		
 // Test specific Strings
 		
@@ -81,9 +81,11 @@ public class ProceduralUserCrudTest {
 			MoodleAuthentication.logOut(driver);
 			test.pass("Logout successful");
 			
+			
 			driver.close();
 			test.pass("Browser closed");
 			test.pass(testName+" complete");
+
 			
 			extent.flush();
 			driver.quit();
@@ -123,6 +125,7 @@ public class ProceduralUserCrudTest {
 			SendKeysBy.Id(driver, "id_lastname", creatableSurname);
 			SendKeysBy.Id(driver, "id_email", creatableEmailAddress);
 			test.info("User Entry Fields populated");
+			
 			
 			ClickBy.Id(driver, "id_submitbutton");
 			test.info("Submit button clicked");

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.ClickBy;
+import utils.Excel;
 import utils.SendKeysBy;
 
 public class MoodleAuthentication {
@@ -14,12 +15,18 @@ public class MoodleAuthentication {
 public static void logIn(WebDriver driver) {
 	
 
-	final String testUsername = "testingbot";
-	final String testPassword = "Testingbot123$$";
+	
+	Excel excel = new Excel("C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Access_Creds.xlsx", "Sheet1");
+	
+	String testUsername = excel.getStringCellData(1, 0);
+	
+	String testPassword = excel.getStringCellData(1, 1);
+	
+	String testIP = excel.getStringCellData(1, 2);
 
 	
 	//Opens Moodle
-	driver.get("http://18.224.103.219/");
+	driver.get(testIP);
 	
 	//Clicks Login link
 	ClickBy.LinkText(driver, "Log in");
@@ -39,8 +46,14 @@ public static void logIn(WebDriver driver) {
 public static void logInAsUser(WebDriver driver, String username, String password) {
 	
 	
+
+	Excel excel = new Excel("C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Access_Creds.xlsx", "Sheet1");
+	
+	String testIP = excel.getStringCellData(1, 2);
+	
+	
 	//Opens Moodle
-	driver.get("http://18.224.103.219/");
+	driver.get(testIP);
 	
 	//Clicks Login link
 	ClickBy.LinkText(driver, "Log in");

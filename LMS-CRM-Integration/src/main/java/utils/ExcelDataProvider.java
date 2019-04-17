@@ -8,7 +8,7 @@ public class ExcelDataProvider {
 		Excel excel = new Excel(excelPath, sheetName);
 		
 		int rowCount = excel.getRowCount();
-		int columnCount = excel.getcolumnCount();
+		int columnCount = excel.getColumnCount();
 		
 		
 		

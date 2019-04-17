@@ -5,19 +5,21 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Excel {
 	
-	public static String excelFilePath = "C:\\Users\\Daniel - new\\Desktop\\Access_Creds.xlsx";
+//	public static String excelFilePath;
+//	//= "C:\\Users\\Daniel - new\\Desktop\\Access_Creds.xlsx";
+//	public static String sheetName;
+	//= "Sheet1";
 	
 	static XSSFWorkbook workbook;
 	static XSSFSheet sheet;
 //	static String systemPath = System.getProperty("user.dir");
-	
-	
+		
 	public Excel(String excelPath, String sheetName) {
 			
 		try {
 			
-			workbook = new XSSFWorkbook(excelFilePath);
-			workbook.getSheet("Sheet1");
+			workbook = new XSSFWorkbook(excelPath);
+			sheet = workbook.getSheet(sheetName);
 			
 			
 			
@@ -32,17 +34,6 @@ public class Excel {
 	}
 	
 	
-	public static String getTestUserName() {
-		
-		String testUserName = null;
-
-		testUserName = Excel.getStringCellData(1, 0);
-		
-		
-		return testUserName;
-		
-		
-	}
 	
 	public static int getRowCount() {
 		
@@ -63,7 +54,7 @@ public class Excel {
 		
 	}
 	
-	public static int getcolumnCount() {
+	public static int getColumnCount() {
 		
 		int columnCount = 0;
 
@@ -82,7 +73,7 @@ public class Excel {
 		
 	}
 
-	public static String getStringCellData(int rowNumber, int colNumber) {
+	public String getStringCellData(int rowNumber, int colNumber) {
 		
 		String cellData = null;
 
@@ -100,6 +91,7 @@ public class Excel {
 		return cellData;
 		
 	}
+	
 	
 	public static double getDoubleCellData(int rowNumber, int colNumber) {
 		
