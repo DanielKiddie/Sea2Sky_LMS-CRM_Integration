@@ -5,10 +5,9 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -25,65 +24,67 @@ import utils.SendKeysBy;
 
 public class UserCrudTests {
 	
-// Test report details and screenshot save location
+	// Test report details and screenshot save location
 	
-		private static String testName = "Moodle User CRUD Test";
-		private static String testDescription = "Runs Create, Read, Update, and Delete tests on Moodle User component";
-		private static String screenshotSaveLocationFilePath = "C:\\\\Users\\\\Daniel - new\\\\Desktop\\\\Poludo Institute\\\\Selenium\\\\FrameworkToolShop\\\\error.png";
-		
-// Test specific Strings
-		
-		private static String creatableUserName = "smithalfred";
-		private static String creatableFirstName = "Alfred";
-		private static String creatableSurname = "Smith";
-		private static String creatablePassword = "Alfred123$$";
-		private static String creatableEmailAddress = "SmithAlfred@gmail.com";
-		private static String creatableSecondEmail = "AltSmithAlfred@hotmail.com";
-
-		
-// Instantiates what is needed for the test components 
+			private static String testName = "Moodle User CRUD Tests";
+			private static String testDescription = "Runs Create, Read, Update, and Delete tests on Moodle User component";
+			private static String screenshotSaveLocationFilePath = "C:\\Users\\Daniel - new\\Desktop\\Poludo Institute\\Personal Github Repos 2019 onward\\Sea2Sky_LMS-CRM_Integration\\LMS-CRM-Integration\\\\User_CRUD_Fail.png";
 			
-		private static WebDriver driver = new ChromeDriver();
-		//private static WebDriver driver = new FirefoxDriver();
-		
-		static WebDriverWait wait = new WebDriverWait(driver, 10);
-		
-		static ExtentHtmlReporter htmlReporter;
-		static ExtentReports extent;
-		static ExtentTest test; 
+			
+	// Test specific Strings
+			
+			private static String creatableUserName = "smithalfred";
+			private static String creatableFirstName = "Alfred";
+			private static String creatableSurname = "Smith";
+			private static String creatablePassword = "Alfred123$$";
+			private static String creatableEmailAddress = "SmithAlfred@gmail.com";
+			private static String creatableSecondEmail = "AltSmithAlfred@hotmail.com";
+
+			
+	// Instantiates what is needed for the test components 
+				
+			private static WebDriver driver = new ChromeDriver();
+			//private static WebDriver driver = new FirefoxDriver();
+			
+			
+			static ExtentHtmlReporter htmlReporter;
+			static ExtentReports extent;
+			static ExtentTest test;  
 		
 
 // Standard TestNG annotation structure
 		
-		@BeforeClass
+		@BeforeSuite
 		public static void setUpBeforeClass() throws Exception {
-		
-		
-		htmlReporter = new ExtentHtmlReporter("extent.html");
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		test = extent.createTest(testName, testDescription);
-		htmlReporter.config().setTheme(Theme.DARK);
-		
-		test.info("Starting "+testName);
-		
-		test.info("Logging in");
-		MoodleAuthentication.logIn(driver);	
-		test.pass("Login succesful");
+			
+			
+			htmlReporter = new ExtentHtmlReporter("extent.html");
+			extent = new ExtentReports();
+			extent.attachReporter(htmlReporter);
+			test = extent.createTest(testName, testDescription);
+			htmlReporter.config().setTheme(Theme.DARK);
+			
+			test.info("Starting "+testName);
+			
+			test.info("Logging in");
+			MoodleAuthentication.logIn(driver);	
+			test.pass("Login succesful");
 		
 		
 		}
 
-		@AfterClass
-		public static void tearDownAfterClass() throws Exception {
+		@AfterSuite
+public static void tearDownAfterClass() throws Exception {
 			
 			test.info("Logging out");
 			MoodleAuthentication.logOut(driver);
 			test.pass("Logout successful");
 			
+			
 			driver.close();
 			test.pass("Browser closed");
 			test.pass(testName+" complete");
+
 			
 			extent.flush();
 			driver.quit();
@@ -100,7 +101,7 @@ public class UserCrudTests {
 		
 //Create User Test
 
-		@Test(groups= {"Create"})
+		@Test(groups={"Create"}, priority= 1)
 		public void createUser() throws IOException {
 			
 			test.info("Starting Create Test");
@@ -109,7 +110,8 @@ public class UserCrudTests {
 			
 		try {
 			
-			MoodleAuthentication.clickSiteAdminTabReliably(driver);
+MoodleAuthentication.clickSiteAdminTabReliably(driver);
+			
 			
 			ClickBy.LinkText(driver, "Users");
 			ClickBy.LinkText(driver, "Add a new user");
@@ -124,12 +126,13 @@ public class UserCrudTests {
 			SendKeysBy.Id(driver, "id_email", creatableEmailAddress);
 			test.info("User Entry Fields populated");
 			
+			
 			ClickBy.Id(driver, "id_submitbutton");
 			test.info("Submit button clicked");
 			test.info("User Created: "+creatableFirstName+" "+creatableSurname);
 					
 				
-			test.pass("Create Test complete");
+			test.pass("Create Test complete");	
 			
 		} catch (Exception e) {
 			
@@ -143,7 +146,7 @@ public class UserCrudTests {
 	}
 		
 
-		@Test(groups= {"Read"})
+		@Test(groups={"Read"}, priority= 2)
 		public void readUser() {
 				
 			test.info("Starting Read Test");
@@ -161,12 +164,13 @@ public class UserCrudTests {
 			test.info("Created User found and profile selected");
 			
 			
-			Boolean initialCreatedEmail = CheckIfDisplayedBy.LinkText(driver, creatableEmailAddress);
-			if (initialCreatedEmail) {
+			if (CheckIfDisplayedBy.LinkText(driver, creatableEmailAddress)) {
 			test.pass("User First Name, Surname and Email Address saved to account"); }
 			
 			MoodleAuthentication.logOut(driver);
 			MoodleAuthentication.logInAsUser(driver, creatableUserName, creatablePassword);
+			
+			
 			MoodleAuthentication.logOut(driver);
 			test.pass("Login and Logout from User account successful");
 			
@@ -187,7 +191,7 @@ public class UserCrudTests {
 			}
 		}
 		
-			@Test(groups= {"Update"})
+			@Test(groups={"Update"}, priority= 3)
 			public void updateUser() {
 				
 				test.info("Starting Update Test");
@@ -213,12 +217,11 @@ public class UserCrudTests {
 			
 			ClickBy.LinkText(driver, creatableFirstName+" "+creatableSurname);
 			ClickBy.LinkText(driver, creatableSecondEmail);
-			Boolean updatedEmail = CheckIfDisplayedBy.LinkText(driver, creatableSecondEmail);
-			if (updatedEmail) {
+			if (CheckIfDisplayedBy.LinkText(driver, creatableSecondEmail)) {
 			test.pass("Updated Email Saved to User Account"); }
 				
 				
-			test.pass("Update Test complete");
+			test.pass("Update Test complete");	
 		} catch (Exception e) {
 			
 			String failureReason = e.getMessage();
@@ -230,7 +233,7 @@ public class UserCrudTests {
 		}
 	}
 			
-			@Test(groups= {"Delete"})
+			@Test(groups={"Delete"}, priority= 4)
 			public void deleteUser() throws IOException {
 				
 				test.info("Starting Delete Test");
@@ -254,7 +257,7 @@ public class UserCrudTests {
 			test.info("Created User deleted");
 				
 				
-			test.pass("Delete Test complete");		
+			test.pass("Delete Test complete");			
 			
 		
 		
@@ -263,8 +266,7 @@ public class UserCrudTests {
 			
 				//Auto-screenshot on failure
 				Screenshot.take(driver, screenshotSaveLocationFilePath);
-				//File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				//FileUtils.copyFile(src, new File(screenshotSaveLocationFilePath));
+				
 			
 				String failureReason = e.getMessage();
 				test.fail(testName+" failed: "+failureReason);

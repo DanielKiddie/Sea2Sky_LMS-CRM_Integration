@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 16, 2019 07:58:36 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 24, 2019 07:55:40 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,7 +72,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -123,10 +122,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -138,10 +137,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='44.444%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='36.667%'><span class='strong'>11</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='44.444%'>4</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='63.333%'>19</span> others
 				</div>
 			</div>
 		</div>
@@ -156,17 +155,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Moodle User CRUD Tests</span>
-						<span class='test-time'>Apr 16, 2019 07:58:36 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Apr 24, 2019 07:55:41 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 16, 2019 07:58:36 PM</span>
-	<span class='label end-time'>Apr 16, 2019 07:58:49 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+133ms</span>
+	<span class='label start-time'>Apr 24, 2019 07:55:41 PM</span>
+	<span class='label end-time'>Apr 24, 2019 07:56:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 55s+810ms</span>
 </div>
 	<div class='test-desc'>Runs Create, Read, Update, and Delete tests on Moodle User component </div>
 	<div class='test-steps'>
@@ -181,57 +180,152 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:58:36 PM</td>
+					<td class='timestamp'>7:55:41 PM</td>
 					<td class='step-details'>Starting Moodle User CRUD Tests</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:58:36 PM</td>
+					<td class='timestamp'>7:55:41 PM</td>
 					<td class='step-details'>Logging in</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:58:43 PM</td>
+					<td class='timestamp'>7:55:48 PM</td>
 					<td class='step-details'>Login succesful</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:58:43 PM</td>
+					<td class='timestamp'>7:55:48 PM</td>
 					<td class='step-details'>Starting Create Test</td>
-				</tr>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>7:58:45 PM</td>
-					<td class='step-details'>Moodle User CRUD Tests failed: no such element: Unable to locate element: {"method":"id","selector":"BreakMe"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'DANIEL-PC', ip: '10.0.0.25', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_192'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\DANIEL~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54059}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: bc5a4b9aeb8c9df64cb66e0f755c4874
-*** Element info: {Using=id, value=BreakMe}</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:58:45 PM</td>
+					<td class='timestamp'>7:55:54 PM</td>
+					<td class='step-details'>Navigated to Add New User</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:55:58 PM</td>
+					<td class='step-details'>User Entry Fields populated</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:01 PM</td>
+					<td class='step-details'>Submit button clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:01 PM</td>
+					<td class='step-details'>User Created: Alfred Smith</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:01 PM</td>
+					<td class='step-details'>Create Test complete</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:01 PM</td>
+					<td class='step-details'>Starting Read Test</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:04 PM</td>
+					<td class='step-details'>Navigated to Browse List of Users</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:06 PM</td>
+					<td class='step-details'>Created User found and profile selected</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:06 PM</td>
+					<td class='step-details'>User First Name, Surname and Email Address saved to account</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:12 PM</td>
+					<td class='step-details'>Login and Logout from User account successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:15 PM</td>
+					<td class='step-details'>Read Test complete</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:15 PM</td>
+					<td class='step-details'>Starting Update Test</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:19 PM</td>
+					<td class='step-details'>Navigated to Browse List of Users</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:20 PM</td>
+					<td class='step-details'>Created User found and profile selected</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:22 PM</td>
+					<td class='step-details'>Edit profile button clicked</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:25 PM</td>
+					<td class='step-details'>User Email updated and submit button clicked</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:26 PM</td>
+					<td class='step-details'>Updated Email Saved to User Account</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:26 PM</td>
+					<td class='step-details'>Update Test complete</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:26 PM</td>
+					<td class='step-details'>Starting Delete Test</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:29 PM</td>
+					<td class='step-details'>Navigated to Browse List of Users</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:35 PM</td>
+					<td class='step-details'>Created User deleted</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:56:35 PM</td>
+					<td class='step-details'>Delete Test complete</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>7:56:35 PM</td>
 					<td class='step-details'>Logging out</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:58:46 PM</td>
+					<td class='timestamp'>7:56:36 PM</td>
 					<td class='step-details'>Logout successful</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:58:49 PM</td>
+					<td class='timestamp'>7:56:36 PM</td>
 					<td class='step-details'>Browser closed</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:58:49 PM</td>
+					<td class='timestamp'>7:56:36 PM</td>
 					<td class='step-details'>Moodle User CRUD Tests complete</td>
 				</tr>
 			</tbody>
@@ -280,25 +374,25 @@ Session ID: bc5a4b9aeb8c9df64cb66e0f755c4874
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>30</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 16, 2019 07:58:36 PM</div>
+					<div class='panel-lead'>Apr 24, 2019 07:55:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 16, 2019 07:58:49 PM</div>
+			 		<div class='panel-lead'>Apr 24, 2019 07:56:36 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 12s+406ms</div>
+					<div class='panel-lead'>0h 0m 55s+989ms</div>
 				</div>
 			</div>
 		</div>
@@ -311,22 +405,22 @@ Session ID: bc5a4b9aeb8c9df64cb66e0f755c4874
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 4,
-				failChild: 1,
+				passChild: 11,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 4,
-				exceptionsChild: 1,
+				infoChild: 19,
+				exceptionsChild: 0,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

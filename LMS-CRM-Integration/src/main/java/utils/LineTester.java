@@ -8,9 +8,10 @@ public class LineTester {
 			
 			//Line to test here
 			
-
+			String excelPath = "C:\\Users\\Daniel - new\\Desktop\\Poludo Institute\\Personal Github Repos 2019 onward\\Sea2Sky_LMS-CRM_Integration\\LMS-CRM-Integration\\excel\\MOCK_DATA.xlsx";
 			
 
+			ExcelDataProvider.testData(excelPath, "data");
 			
 			
 		} catch (Exception e) {

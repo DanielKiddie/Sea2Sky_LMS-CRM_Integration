@@ -157,7 +157,7 @@ public class ProceduralUserCrudTest {
 			MoodleAuthentication.logOut(driver);
 			MoodleAuthentication.logInAsUser(driver, creatableUserName, creatablePassword);
 			
-			// Attempts to wait for log in tour and close it, not usually necessary though
+			// Attempts to wait for login tour and close it, not usually necessary though
 			
 			//WaitForClickableElementBy.Xpath(driver, "(.//*[normalize-space(text()) and normalize-space(.)='Next'])[1]/following::button[1]");
 			//ClickBy.Xpath(driver, "(.//*[normalize-space(text()) and normalize-space(.)='Next'])[1]/following::button[1]");
@@ -200,8 +200,7 @@ public class ProceduralUserCrudTest {
 			
 			ClickBy.LinkText(driver, creatableFirstName+" "+creatableSurname);
 			ClickBy.LinkText(driver, creatableSecondEmail);
-			Boolean updatedEmail = CheckIfDisplayedBy.LinkText(driver, creatableSecondEmail);
-			if (updatedEmail) {
+			if (CheckIfDisplayedBy.LinkText(driver, creatableSecondEmail)) {
 			test.pass("Updated Email Saved to User Account"); }
 				
 				

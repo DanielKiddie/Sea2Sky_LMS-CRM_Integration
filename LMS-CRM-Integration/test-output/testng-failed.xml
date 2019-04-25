@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MoodleSmokeTest]">
+  <test thread-count="5" name="User_Course_Category_Enroll(failed)">
+    <groups>
+      <run>
+        <include name="Create"/>
+        <include name="Read"/>
+        <include name="Update"/>
+        <include name="Delete"/>
+      </run>
+    </groups>
     <classes>
-      <class name="moodle_test_prototypes.ProceduralUserCrudTest">
+      <class name="moodle_tests.UserCrudTests">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="tearDownAfterClass"/>
-          <include name="setUpBeforeClass"/>
-          <include name="test"/>
+          <include name="readUser"/>
+          <include name="updateUser"/>
+          <include name="deleteUser"/>
+          <include name="createUser"/>
         </methods>
-      </class> <!-- moodle_test_prototypes.ProceduralUserCrudTest -->
+      </class> <!-- moodle_tests.UserCrudTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- User_Course_Category_Enroll(failed) -->
+</suite> <!-- Failed suite [MoodleSmokeTest] -->
