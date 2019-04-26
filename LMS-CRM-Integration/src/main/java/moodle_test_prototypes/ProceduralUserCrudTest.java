@@ -26,7 +26,7 @@ public class ProceduralUserCrudTest {
 	
 // Test report details and screenshot save location
 	
-		private static String testName = "Moodle User CRUD Tests";
+		private static String testName = "Moodle Procedural User CRUD Tests";
 		private static String testDescription = "Runs Create, Read, Update, and Delete tests on Moodle User component";
 		private static String screenshotSaveLocationFilePath = "C:\\Users\\Daniel - new\\Desktop\\Poludo Institute\\Personal Github Repos 2019 onward\\Sea2Sky_LMS-CRM_Integration\\LMS-CRM-Integration\\\\Procedural_User_CRUD_Fail.png";
 		
@@ -59,7 +59,7 @@ public class ProceduralUserCrudTest {
 		public static void setUpBeforeClass() throws Exception {
 		
 		
-		htmlReporter = new ExtentHtmlReporter("extent.html");
+		htmlReporter = new ExtentHtmlReporter("ProceduralUserCrudTestsExtent.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		test = extent.createTest(testName, testDescription);

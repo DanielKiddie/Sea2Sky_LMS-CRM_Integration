@@ -58,7 +58,7 @@ public class UserCrudTests {
 		public static void setUpBeforeClass() throws Exception {
 			
 			
-			htmlReporter = new ExtentHtmlReporter("extent.html");
+			htmlReporter = new ExtentHtmlReporter("UserCrudTestsExtent.html");
 			extent = new ExtentReports();
 			extent.attachReporter(htmlReporter);
 			test = extent.createTest(testName, testDescription);
@@ -110,7 +110,7 @@ public static void tearDownAfterClass() throws Exception {
 			
 		try {
 			
-MoodleAuthentication.clickSiteAdminTabReliably(driver);
+			MoodleAuthentication.clickSiteAdminTabReliably(driver);
 			
 			
 			ClickBy.LinkText(driver, "Users");
@@ -146,7 +146,7 @@ MoodleAuthentication.clickSiteAdminTabReliably(driver);
 	}
 		
 
-		@Test(groups={"Read"}, priority= 2)
+		@Test(groups={"Read"}, priority= 2, dependsOnMethods = { "createUser" })
 		public void readUser() {
 				
 			test.info("Starting Read Test");
@@ -191,7 +191,7 @@ MoodleAuthentication.clickSiteAdminTabReliably(driver);
 			}
 		}
 		
-			@Test(groups={"Update"}, priority= 3)
+			@Test(groups={"Update"}, priority= 3,  dependsOnMethods = { "readUser" })
 			public void updateUser() {
 				
 				test.info("Starting Update Test");
@@ -233,7 +233,7 @@ MoodleAuthentication.clickSiteAdminTabReliably(driver);
 		}
 	}
 			
-			@Test(groups={"Delete"}, priority= 4)
+			@Test(groups={"Delete"}, priority= 4,  dependsOnMethods = { "updateUser" })
 			public void deleteUser() throws IOException {
 				
 				test.info("Starting Delete Test");

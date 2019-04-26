@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" ignored="4" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="MoodleSmokeTest" duration-ms="14" started-at="2019-04-25T03:06:06Z" finished-at="2019-04-25T03:06:06Z">
+  <suite name="MoodleSmokeTest" duration-ms="18" started-at="2019-04-26T01:00:44Z" finished-at="2019-04-26T01:00:44Z">
     <groups>
     </groups>
-    <test name="User_Course_Category_Enroll" duration-ms="14" started-at="2019-04-25T03:06:06Z" finished-at="2019-04-25T03:06:06Z">
+    <test name="User_Course_Category_Enroll" duration-ms="18" started-at="2019-04-26T01:00:44Z" finished-at="2019-04-26T01:00:44Z">
     </test> <!-- User_Course_Category_Enroll -->
   </suite> <!-- MoodleSmokeTest -->
 </testng-results>
