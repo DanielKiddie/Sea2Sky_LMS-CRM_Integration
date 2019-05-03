@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="4" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="MoodleSmokeTest" duration-ms="18" started-at="2019-04-26T01:00:44Z" finished-at="2019-04-26T01:00:44Z">
+  <suite name="Default suite" duration-ms="1484" started-at="2019-05-01T03:39:24Z" finished-at="2019-05-01T03:39:25Z">
     <groups>
     </groups>
-    <test name="User_Course_Category_Enroll" duration-ms="18" started-at="2019-04-26T01:00:44Z" finished-at="2019-04-26T01:00:44Z">
-    </test> <!-- User_Course_Category_Enroll -->
-  </suite> <!-- MoodleSmokeTest -->
+    <test name="Default test" duration-ms="1484" started-at="2019-05-01T03:39:24Z" finished-at="2019-05-01T03:39:25Z">
+      <class name="utils.LineTester">
+        <test-method status="PASS" signature="doesItWork()[pri:0, instance:utils.LineTester@3e6fa38a]" name="doesItWork" duration-ms="1422" started-at="2019-05-01T03:39:24Z" finished-at="2019-05-01T03:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doesItWork -->
+      </class> <!-- utils.LineTester -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

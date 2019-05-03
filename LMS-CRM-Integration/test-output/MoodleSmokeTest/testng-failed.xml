@@ -4,6 +4,7 @@
   <test thread-count="5" name="User_Course_Category_Enroll(failed)">
     <groups>
       <run>
+        <include name="smoke"/>
         <include name="Create"/>
         <include name="Read"/>
         <include name="Update"/>

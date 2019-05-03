@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="MoodleSmokeTest">
-  <test thread-count="1" name="User_Course_Category_Enroll">
+  <test name="User_Course_Category_Enroll">
   
   <groups>
   			
@@ -18,7 +18,11 @@
   
   <run> <!-- Which groups get used when test is run -->
   
-  			<include name= "smoke" ></include>
+  			
+  			<include name= "Create" ></include>
+  			<include name= "Read" ></include>
+  			<include name= "Update" ></include>
+  			<include name= "Delete" ></include>
   
   </run>
   

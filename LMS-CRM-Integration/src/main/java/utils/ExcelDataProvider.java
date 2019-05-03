@@ -1,5 +1,9 @@
 package utils;
 
+/**
+	* A TestNG data provider that extracts data from an Excel file using methods from the Excel.java class.
+	*/
+
 public class ExcelDataProvider {
 	
 	

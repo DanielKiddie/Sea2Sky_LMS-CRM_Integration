@@ -9,8 +9,18 @@ import utils.ClickBy;
 import utils.Excel;
 import utils.SendKeysBy;
 
+/**
+ 	* Methods to handle operations related to Moodle authentication.
+	*/
+
 public class MoodleAuthentication {
-	
+
+/**
+     * Acquires Moodle testing profile access credentials and test server IP from an Excel file and logs into Moodle with them. 
+     *
+     * @param driver 
+     * the WebDriver instance being used 
+     */
 	
 public static void logIn(WebDriver driver) {
 	
@@ -43,6 +53,19 @@ public static void logIn(WebDriver driver) {
 	
 }
 
+/**
+ 	* Acquires Moodle test server IP from an Excel file and logs into Moodle with access credentials provided through the parameters. 
+ 	*
+ 	* @param driver 
+ 	* the WebDriver instance being used 
+ 	* 
+ 	* @param username 
+ 	* a String of the username to be used in login sequence
+ 	* 
+ 	* @param password 
+ 	* a String of the password to be used in login sequence
+ 	*/
+
 public static void logInAsUser(WebDriver driver, String username, String password) {
 	
 	
@@ -67,18 +90,32 @@ public static void logInAsUser(WebDriver driver, String username, String passwor
 	ClickBy.Id(driver, "loginbtn");
 }
 
+/**
+ 	* Logs out from Moodle. 
+ 	*
+ 	* @param driver 
+ 	* the WebDriver instance being used 
+ 	*/
+
 public static void logOut(WebDriver driver) {
 	driver.findElement(By.id("dropdown-1")).click();
 	
 	driver.findElement(By.linkText("Log out")).click();
 }
 
+/**
+	* Waits for visibility of Site Administration tab, 
+	* if visible it's clicked, if it's not the hamburger icon to open the main navigation window is clicked then the Site Administration tab is clicked. 
+	*
+	* @param driver 
+	* the WebDriver instance being used 
+	*/
+
 public static void clickSiteAdminTabReliably(WebDriver driver) {
 	
 	try {
-		WebDriverWait wait = new WebDriverWait(driver, 3);
-		
-		
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+				
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Site administration")));
 		
 		ClickBy.LinkText(driver, "Site administration");

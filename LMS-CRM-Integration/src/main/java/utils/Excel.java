@@ -3,6 +3,10 @@ package utils;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+	* A class and methods that handle operations related to reading from Excel files using Apache POI.
+	*/
+
 public class Excel {
 	
 //	public static String excelFilePath;
@@ -33,7 +37,12 @@ public class Excel {
 		
 	}
 	
-	
+	/**
+     * Gets Excel file's number of records.
+     *
+     * @return int 
+     * the number of records
+     */
 	
 	public static int getRowCount() {
 		
@@ -53,6 +62,12 @@ public class Excel {
 		return rowCount;
 		
 	}
+	/**
+     * Gets Excel file's number of columns.
+     *
+     * @return int 
+     * the number of columns
+     */
 	
 	public static int getColumnCount() {
 		
@@ -73,6 +88,17 @@ public class Excel {
 		
 	}
 
+	/**
+     * Gets the String content of a specific cell in an Excel File. 
+     *
+     * @param rowNumber the number indicating which record to draw from (zero indexed)
+	 *
+	 * @param colNumber the number indicating which column to draw from (zero indexed)
+     *
+     * @return String 
+     * cell content
+     */
+	
 	public String getStringCellData(int rowNumber, int colNumber) {
 		
 		String cellData = null;
@@ -92,6 +118,16 @@ public class Excel {
 		
 	}
 	
+	/**
+     * Gets the double content of a specific cell in an Excel File. 
+     *
+     * @param rowNumber the number indicating which record to draw from (zero indexed)
+	 *
+	 * @param colNumber the number indicating which column to draw from (zero indexed)
+     *
+     * @return double 
+     * cell content
+     */
 	
 	public static double getDoubleCellData(int rowNumber, int colNumber) {
 		

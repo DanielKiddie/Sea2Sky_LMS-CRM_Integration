@@ -1,6 +1,12 @@
 package utils;
 
+/**
+	* A class with a main method and a try/catch block to serve as a tool to test individual lines of code.
+	*/
+
 public class LineTester {
+
+	
 
 	public static void main(String[] args) {
 		

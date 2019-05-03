@@ -3,6 +3,10 @@ package moodle_test_resources;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+	* Methods designed to be used in tests of Moodle's User, Course, Course Category, and Enrollment components.
+	*/
+
 public class MoodleBVTQuickNavMethods {
 	
 	public static void navigatetoBrowseListOfUsers(WebDriver driver) {
